@@ -1,4 +1,4 @@
-app = "blog-tutorial-0d07"
+app = "personal-blog-remix"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]

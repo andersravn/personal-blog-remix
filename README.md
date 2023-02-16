@@ -59,7 +59,7 @@ This is a pretty simple blogging app, but it's a good example of how you can bui
 
 - creating users, and logging in and out [./app/models/user.server.ts](./app/models/user.server.ts)
 - user sessions, and verifying them [./app/session.server.ts](./app/session.server.ts)
-- creating, and deleting posts [./app/models/post.server.ts](./app/models/note.server.ts)
+- creating, and deleting posts [./app/models/post.server.ts](./app/models/post.server.ts)
 
 ## Deployment
 
