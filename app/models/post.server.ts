@@ -2,7 +2,15 @@ import { prisma } from "~/db.server";
 import type { Post, Tag, User } from "@prisma/client";
 
 export async function getPosts() {
-  return prisma.post.findMany();
+  return prisma.post.findMany({ orderBy: { createdAt: "desc" } });
+}
+
+export async function getPostsForFrontPage() {
+  return prisma.post.findMany({
+    orderBy: { createdAt: "desc" },
+    include: { tags: { select: { name: true } } },
+    take: 5,
+  });
 }
 
 export async function getPost(slug: string) {

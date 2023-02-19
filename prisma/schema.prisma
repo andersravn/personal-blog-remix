@@ -33,6 +33,7 @@ model Tag {
 model Post {
   slug  String @id
   title String
+  excerpt String @default("")
   markdown String
 
   createdAt DateTime @default(now())
