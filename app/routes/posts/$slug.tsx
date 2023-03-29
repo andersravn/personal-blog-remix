@@ -19,9 +19,14 @@ export default function PostSlug() {
   const { post, html } = useLoaderData<typeof loader>();
   return (
     <main className="mx-auto max-w-4xl">
-      <h1 className="my-6 border-b-2 text-center text-3xl">{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }}></div>
-      <div className="space-x-2 text-sm">
+      <h1 className="my-6 text-center text-3xl font-black text-orange-600">
+        {post.title}
+      </h1>
+      <div
+        className="px-4 dark:text-slate-300"
+        dangerouslySetInnerHTML={{ __html: html }}
+      ></div>
+      <div className="space-x-2 text-sm dark:text-slate-300">
         <span>Tags:</span>
         {post.tags.map((tag) => (
           <span key={tag.name}>{tag.name}</span>
